@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: lavalust-crud
+    runtime: php
+    plan: free
+    buildCommand: "php -v"
+    startCommand: "php -S 0.0.0.0:$PORT index.php"
+    envVars:
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_NAME
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+      - key: LOGIN_EMAIL
+        value: admin@lavalust.local
+      - key: LOGIN_PASSWORD
+        value: password123
