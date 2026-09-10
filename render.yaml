@@ -19,6 +19,6 @@ services:
       - key: DB_PASSWORD
         sync: false
       - key: LOGIN_EMAIL
-        value: admin@lavalust.local
+        value: Manuel
       - key: LOGIN_PASSWORD
-        value: password123
+        value: Oriola123
