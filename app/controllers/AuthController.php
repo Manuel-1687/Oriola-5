@@ -2,15 +2,20 @@
 require_once __DIR__ . '/../bootstrap.php';
 
 class AuthController {
+    private const USERNAME = 'Manuel';
+    private const PASSWORD = 'Oriola123';
+
     public function login(): void {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $email = $_POST['email'] ?? '';
+            $username = trim($_POST['username'] ?? '');
             $password = $_POST['password'] ?? '';
-            if ($email === env('LOGIN_EMAIL') && $password === env('LOGIN_PASSWORD')) {
-                $_SESSION['user'] = ['email' => $email];
+
+            if ($username === self::USERNAME && $password === self::PASSWORD) {
+                $_SESSION['user'] = ['username' => $username];
                 header('Location: /products');
                 exit;
             }
+
             $error = 'Invalid credentials';
         }
 

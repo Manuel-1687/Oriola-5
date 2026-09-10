@@ -16,10 +16,10 @@
         <h2>Login</h2>
         <?php if (isset($error)) echo '<p class="error">' . htmlspecialchars($error) . '</p>'; ?>
         <form method="post" action="/">
-            <label>Email</label>
-            <input type="email" name="email" value="admin@lavalust.local" required>
+            <label>Username</label>
+            <input type="text" name="username" value="Manuel" required>
             <label>Password</label>
-            <input type="password" name="password" value="password123" required>
+            <input type="password" name="password" value="Oriola123" required>
             <button type="submit">Login</button>
         </form>
     </div>
