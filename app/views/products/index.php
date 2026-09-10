@@ -4,16 +4,111 @@
     <meta charset="utf-8">
     <title>Products</title>
     <style>
-        body { font-family: Arial, sans-serif; background: #eef3f7; margin: 0; padding: 30px; }
-        .container { max-width: 960px; margin: auto; background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
-        h2 { margin-top: 0; }
-        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
-        th { background: #0d6efd; color: white; }
-        a, button { margin-right: 6px; color: #0d6efd; text-decoration: none; }
-        .btn { display: inline-block; padding: 8px 12px; background: #0d6efd; color: white; border-radius: 5px; }
-        .danger { background: #dc3545; }
-        .head { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background:
+                radial-gradient(circle at 80% 10%, rgba(107, 190, 255, 0.45), transparent 24%),
+                radial-gradient(circle at 60% 90%, rgba(202, 93, 255, 0.40), transparent 22%),
+                linear-gradient(135deg, #07111f 0%, #16213f 100%);
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            color: #eefaff;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            padding: 30px;
+            border-radius: 22px;
+            border: 1px solid rgba(245, 251, 255, 0.35);
+            box-shadow: 0 16px 50px rgba(0, 0, 0, 0.45), inset 0 0 30px rgba(255,255,255,0.04);
+        }
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        h2 {
+            margin: 0;
+            color: #88ffd8;
+            font-size: 34px;
+            font-weight: 700;
+        }
+
+        .head > div {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        th, td {
+            border: 1px solid rgba(255,255,255,0.20);
+            padding: 12px 10px;
+            text-align: left;
+        }
+
+        th {
+            background: linear-gradient(135deg, #88ffd8, #6c88ff);
+            color: #07111f;
+            font-weight: 700;
+        }
+
+        td {
+            color: #eefaff;
+        }
+
+        tr:nth-child(even) {
+            background: rgba(255,255,255,0.04);
+        }
+
+        a {
+            margin-right: 6px;
+            color: #88ffd8;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        a:hover {
+            color: #ffffff;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 14px;
+            background: linear-gradient(135deg, #88ffd8, #6c88ff);
+            color: #07111f;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            box-shadow: 0 0 14px rgba(136, 255, 216, 0.7);
+        }
+
+        .danger {
+            background: linear-gradient(135deg, #ff9a9e, #c44569);
+            color: #fff;
+        }
     </style>
 </head>
 <body>
